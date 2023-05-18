@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+:root{
+    /* primary*/
+--color1: hsl(0, 78%, 62%);
+--color2: hsl(180, 62%, 55%);
+--color3: hsl(34, 97%, 64%);
+--color4: hsl(212, 86%, 64%);
+/*secundary*/
+--color5: hsl(234, 12%, 34%);
+--color6: hsl(229, 6%, 66%);
+--color7: hsl(0, 0%, 98%);
+}
+
+/*OBS.: Nesse projeto optei por criar efeitos, mas na descrição dele,
+não é exigido. obg*/
+
+/* MOBILE*/
+
+body{
+    padding: 0 0 2.6em 0;
+}
+main, .header, .one, .two, .three, .four, .monitor, .text{
+    display: flex;
+}
+main, .header, .one, .two, .three, .four, .monitor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    width: 100%;
+    height: 100vh;
+}
+.header{
+    width: 20.3em;
+    padding: 2.6em 0 0 0;
+    gap: 1em;
+    text-align: center;
+}
+.thin{
+    font-weight: 200;
+}
+h2{
+    color: var(--color5);
+}
+p, .thin{
+    color: var(--color6);
+}
+
+
+/*----------------------------------ONE------------------------------------*/
+
+.one{
+    width: 19.3em;
+    height: 13.8em;
+    margin: 6em 0 0 0;
+    padding: 1.5em;
+    border-top: var(--color2) solid 0.3em;
+    border-radius: 0.6em;
+    box-shadow: 0em 0em 2em 0em #ccc;
+    transition: all 0.5s ease;
+}
+.one:hover{
+    transform: scale(1.01);
+    box-shadow: 0em 0em 2em 0em var(--color2);
+    border-top: none;
+}
+.one h2:hover{
+    color: var(--color2);
+}
+.monitor{
+    font-size: 0.8em;
+    text-align: left;
+    align-content: start;
+    gap: 0.5em;
+}
+.monitor h2{
+    align-self: self-start;
+}
+.icon{
+    width: 3em;
+    align-self: self-end;
+    margin: 4em 0 0 0;
+}
+
+/*----------------------------------TWO------------------------------------*/
+
+.two{
+    width: 19.3em;
+    height: 13.8em;
+    margin: 2em 0 0 0;
+    padding: 1.5em;
+    border-top: var(--color1) solid 0.3em;
+    border-radius: 0.6em;
+    box-shadow: 0em 0em 2em 0em #ccc;
+    transition: all 0.5s ease;
+}
+.two:hover{
+    transform: scale(1.01);
+    box-shadow: 0em 0em 2em 0em var(--color1);
+    border-top: none;
+}
+.two h2:hover{
+    color: var(--color1);
+}
+.monitor{
+    font-size: 0.8em;
+    text-align: left;
+    align-content: start;
+}
+.monitor h2{
+    align-self: self-start;
+}
+.icon{
+    width: 3em;
+    align-self: flex-end;
+    margin: 3em 0 0 0;
+}
+/*----------------------------------THREE------------------------------------*/
+
+.three{
+    width: 19.3em;
+    height: 13.8em;
+    margin: 2em 0 0 0;
+    padding: 1.5em;
+    border-top: var(--color3) solid 0.3em;
+    border-radius: 0.6em;
+    box-shadow: 0em 0em 2em 0em #ccc;
+    transition: all 0.5s ease;
+}
+.three:hover{
+    transform: scale(1.01);
+    box-shadow: 0em 0em 2em 0em var(--color3);
+    border-top: none;
+}
+.three h2:hover{
+    color: var(--color3);
+}
+.monitor{
+    font-size: 0.8em;
+    text-align: left;
+    align-content: start;
+}
+.monitor h2{
+    align-self: self-start;
+}
+.icon{
+    width: 3em;
+    align-self: flex-end;
+    margin: 3em 0 0 0;
+}
+
+/*----------------------------------FOUR------------------------------------*/
+
+.four{
+    width: 19.3em;
+    height: 13.8em;
+    margin: 2em 0 0 0;
+    padding: 1.5em;
+    border-top: var(--color4) solid 0.3em;
+    border-radius: 0.6em;
+    box-shadow: 0em 0em 2em 0em #ccc;
+    transition: all 0.5s ease;
+}
+.four:hover{
+    transform: scale(1.01);
+    box-shadow: 0em 0em 2em 0em var(--color4);
+    border-top: none;
+}
+.four h2:hover{
+    color: var(--color4);
+}
+.monitor{
+    font-size: 0.8em;
+    text-align: left;
+    align-content: start;
+}
+.monitor h2{
+    align-self: self-start;
+}
+.icon{
+    width: 3em;
+    align-self: flex-end;
+    margin: 3em 0 0 0;
+}
+
+/*----------------------------------"LAP TOP & TABLET"------------------------------------*/
+
+@media(min-width: 1024px){
+    .text{
+        width: 130%;
+    }
+    .grade{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 2fr);
+        align-items: center;
+        justify-content: center;
+        gap: 4em;
+    }
+    .two{
+        margin: 6em 0 0 0; 
+    }
+    .three, .four{
+        margin: 0 0 6em 0;
+    }
+}
+
+/*----------------------------------"LAP TOP L"------------------------------------*/
+        
+@media(min-width: 1440px){
+    .header, h2{
+        font-size: 1.3em;
+        gap: 0.1em;
+    }
+    .text {
+        width: 35em;
+        padding: 1em;
+    }
+    .strong{
+        font-size: 1.4em;
+    }
+    .grade{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .four{
+        position: relative;
+        bottom: 9em;
+        left: 9em;
+    }
+    .two{
+        position: relative;
+        bottom: em;
+        right: 12em;
+    }
+    .three{
+        position: relative;
+        bottom: 2em;
+        left: 11em;
+        
+    }
+    .one{
+        position: relative;
+        top: 9em;
+        right: 10em;
+    }
+}
+
+    
+    
+    
+
+
+    
+
+   
+    
+
+    
